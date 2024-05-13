@@ -20,8 +20,10 @@ app.post('/newStudent', (req, res) => {
     });
 
 app.get('/students?', (req, res) => {
-    res.send('Hello World');
+    res.send(`Hello World ${process.env.STATUS}` );
     });
+
+
 
 app.get('/ab*cd', (req, res) => {
     res.send('got it');
