@@ -15,7 +15,8 @@ app.use(express.json('limit: 1mb'));
 app.post('/newStudent', (req, res) => { 
     const name = req.body.name;
     const age = req.body.age;
-    const msg = `Name: ${name}, Age: ${age}`;
+    const email = req.body.email;
+    const msg = `Name: ${name}, Age: ${age} email: ${email}`;
     res.send(msg);
     });
 
